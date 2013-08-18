@@ -51,8 +51,8 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [ 
-        80    # http 
-        443   # https
+#        80    # http 
+#        443   # https
         6600  # mpd
       ];
       allowPing = true;
