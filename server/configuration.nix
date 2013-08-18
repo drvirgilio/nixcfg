@@ -32,6 +32,7 @@
 
   ######## PACKAGES #########
   environment.systemPackages = with pkgs; [
+    git
     ncmpcpp
     pwgen
   ];
