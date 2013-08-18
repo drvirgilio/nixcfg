@@ -35,6 +35,7 @@
     git
     ncmpcpp
     pwgen
+    w3m
   ];
 
 
