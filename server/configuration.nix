@@ -6,7 +6,6 @@
   ######## SERVICES #########
   
   services = {
-    # Enable the OpenSSH daemon.
     openssh = {
       enable = true;
       permitRootLogin = "no";
@@ -34,6 +33,7 @@
   ######## PACKAGES #########
   environment.systemPackages = with pkgs; [
     ncmpcpp
+    pwgen
   ];
 
 
@@ -78,12 +78,6 @@
       ./hardware-configuration.nix
     ];
 
-  boot.initrd.kernelModules =
-    [ # Specify all kernel modules that are necessary for mounting the root
-      # filesystem.
-      # "xfs" "ata_piix"
-    ];
-    
 
   ########## GRUB ############
 
@@ -97,18 +91,8 @@
   
   ######### FILESYSTEM ##########
 
-  # Add filesystem entries for each partition that you want to see
-  # mounted at boot time.  This should include at least the root
-  # filesystem.
-
   fileSystems."/".device = "/dev/mapper/nixos";
   fileSystems."/boot".device = "/dev/disk/by-label/nixboot";
-
-  # fileSystems."/data" =     # where you want to mount the device
-  #   { device = "/dev/sdb";  # the device
-  #     fsType = "ext3";      # the type of the partition
-  #     options = "data=journal";
-  #   };
 
   # List swap partitions activated at boot time.
   swapDevices =
