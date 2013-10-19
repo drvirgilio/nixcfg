@@ -3,12 +3,14 @@
 {
   ######## SERVICES ##########
   config.services = {
+    acpid.enable = true;
     mpd.enable = true;
     xserver = {
       enable = true;
+      desktopManager.kde4.enable = true;
       defaultDepth = 24;
       videoDrivers = ["intel"];
-      autorun = false;
+      autorun = true;
       startOpenSSHAgent = false;
       exportConfiguration = true;
       synaptics = {
