@@ -3,8 +3,10 @@
 {
   config.environment.systemPackages = with pkgs; [
     acpitool
-#    firefox
+    firefox
     git
+    gnupg
+    go
     ncmpcpp
     pwgen
     vim
