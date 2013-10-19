@@ -2,7 +2,7 @@
 
 {
   config.networking = {
-    wireless.enable = false;
+    wireless.enable = true;
     hostName = "fabletop";
     firewall = {
       enable = true;
