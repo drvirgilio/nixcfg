@@ -10,6 +10,7 @@
       '';
     };
     mpd.enable = true;
+    transmission.enable = true;
     xserver = {
       enable = true;
       desktopManager.kde4.enable = true;
