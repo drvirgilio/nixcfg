@@ -3,7 +3,12 @@
 {
   ######## SERVICES ##########
   config.services = {
-    acpid.enable = true;
+    acpid = {
+      enable = true;
+      powerEventCommands = ''
+        echo -n mem > /sys/power/state
+      '';
+    };
     mpd.enable = true;
     xserver = {
       enable = true;
