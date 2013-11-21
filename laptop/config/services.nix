@@ -15,6 +15,7 @@
       enable = true;
       displayManager.slim.enable = true;
       desktopManager.kde4.enable = true;
+      desktopManager.xterm.enable = false;
       defaultDepth = 24;
       videoDrivers = ["intel"];
       autorun = true;
