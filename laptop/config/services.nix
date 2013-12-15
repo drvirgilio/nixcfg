@@ -20,8 +20,8 @@
     xserver = {
       enable = true;
       displayManager.slim.enable = true;
-      desktopManager.kde4.enable = true;
       desktopManager.xterm.enable = false;
+      windowManager.herbstluftwm.enable = true;
       defaultDepth = 24;
       videoDrivers = ["intel"];
       autorun = true;
