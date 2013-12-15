@@ -24,7 +24,20 @@
       exportConfiguration = true;
       synaptics = {
         enable = true;
-        dev = "/dev/input/mouse0";
+#        dev = "/dev/input/by-path/platform-i8042-serio-1-event-mouse";
+        dev = "/dev/input/event5";
+        accelFactor = "0.05";
+        maxSpeed = "10";
+        twoFingerScroll = true;
+        additionalOptions =
+        ''
+          Option "HorizTwoFingerScroll"   "1"
+          Option "VertTwoFingerScroll"    "1"
+          Option "VertScrollDelta"        "-80"
+          Option "HorizScrollDelta"       "-70"
+          #Option "CircularScrolling"  "on"
+          #Option "CircScrollTrigger"  "0"
+        '';
       };
     };
   };
