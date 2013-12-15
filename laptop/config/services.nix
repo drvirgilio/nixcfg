@@ -15,6 +15,7 @@
     };
     printing.enable = true;
     mpd.enable = true;
+    nixosManual.showManual = true;
     transmission.enable = true;
     xserver = {
       enable = true;
