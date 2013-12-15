@@ -20,6 +20,12 @@
     xserver = {
       enable = true;
       displayManager.slim.enable = true;
+      displayManager.sessionCommands = ''
+        if ! $(pidof -x "gpg-agent" >/dev/null); then
+          eval $(gpg-agent --daemon --enable-ssh-support \
+            --write-env-file "~/.gpg-agent-info")
+        fi
+      '';
       desktopManager.xterm.enable = false;
       windowManager.herbstluftwm.enable = true;
       defaultDepth = 24;
