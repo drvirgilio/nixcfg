@@ -3,7 +3,7 @@
 {
   ######### KERNEL ###########
   imports = [ <nixos/modules/installer/scan/not-detected.nix> ];
-  config.boot.kernelPackages = pkgs.linuxPackages_3_11;
+  config.boot.kernelPackages = pkgs.linuxPackages_3_12;
   config.boot.initrd.kernelModules = [ "ehci_hcd" "ahci" ];
   config.boot.kernelModules = [ "kvm-intel" ];
   config.boot.extraModulePackages = [ ];
