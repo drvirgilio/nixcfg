@@ -7,11 +7,14 @@
     git
     gnupg
     go
+    haskellPackages.ghc
+    haskellPackages.haskellPlatform
     ncmpcpp
     pwgen
     vim
     w3m
     zsh
   ];
+
 }
 
