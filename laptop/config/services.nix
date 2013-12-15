@@ -9,6 +9,7 @@
         echo -n mem > /sys/power/state
       '';
     };
+    printing.enable = true;
     mpd.enable = true;
     transmission.enable = true;
     xserver = {
