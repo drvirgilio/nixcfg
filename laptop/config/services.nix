@@ -8,6 +8,10 @@
       powerEventCommands = ''
         echo -n mem > /sys/power/state
       '';
+      lidEventCommands = ''
+        xs=$(ps -C xscreensaver -o user=)
+        if test $xs; then su $xs -c "xscreensaver-command -lock"; fi
+      '';
     };
     printing.enable = true;
     mpd.enable = true;
