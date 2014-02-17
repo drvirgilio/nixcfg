@@ -41,7 +41,7 @@
       synaptics = {
         enable = true;
 #        dev = "/dev/input/by-path/platform-i8042-serio-1-event-mouse";
-        dev = "/dev/input/event5";
+        dev = "/dev/input/event4";
         accelFactor = "0.05";
         maxSpeed = "10";
         twoFingerScroll = true;
