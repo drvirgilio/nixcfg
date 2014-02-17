@@ -13,6 +13,15 @@
     mpd.enable = true;
     nixosManual.showManual = true;
     transmission.enable = true;
+	openssh = {
+		enable = true;
+		permitRootLogin = "no";
+	};
+	mesa = {
+		videoDrivers = ["intel"];
+		driSupport32Bit = true;
+		s3tcSupport = true;
+	};
     xserver = {
       enable = true;
       displayManager.slim.enable = true;
@@ -23,9 +32,9 @@
         fi
       '';
       desktopManager.xterm.enable = false;
+	  desktopManager.kde4.enable = true;
       windowManager.herbstluftwm.enable = true;
       defaultDepth = 24;
-      videoDrivers = ["intel"];
       autorun = true;
       startOpenSSHAgent = false;
       exportConfiguration = true;
