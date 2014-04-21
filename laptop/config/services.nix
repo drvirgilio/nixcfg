@@ -9,18 +9,13 @@
 				echo -n mem > /sys/power/state
 			'';
 		};
-		printing.enable = true;
-		mpd.enable = true;
+		printing.enable = false;
+		mpd.enable = false;
 		nixosManual.showManual = true;
-		transmission.enable = true;
+		transmission.enable = false;
 		openssh = {
-			enable = true;
+			enable = false;
 			permitRootLogin = "no";
-		};
-		mesa = {
-			videoDrivers = ["intel"];
-			driSupport32Bit = true;
-			s3tcSupport = true;
 		};
 		xserver = {
 			enable = true;
@@ -35,7 +30,7 @@
 			desktopManager.kde4.enable = true;
 			windowManager.herbstluftwm.enable = true;
 			defaultDepth = 24;
-			autorun = true;
+			autorun = false;
 			startOpenSSHAgent = false;
 			exportConfiguration = true;
 			synaptics = {

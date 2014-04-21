@@ -9,6 +9,13 @@
 	config.boot.extraModulePackages = [ ];
 	config.nix.maxJobs = 4;
 
+	######## DRIVERS ##########
+	config.hardware.opengl = {
+		videoDrivers = ["intel"];
+		driSupport32Bit = true;
+		s3tcSupport = true;
+	};
+
 	####### BOOTLOADER ########
 	config.boot.loader.grub.enable = false;
 	config.boot.loader.gummiboot = {
