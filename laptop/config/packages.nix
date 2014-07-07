@@ -2,13 +2,55 @@
 
 {
 	config.environment.systemPackages = with pkgs; [
+		abiword
+		acpi
 		acpitool
+		acpid
+		ascii
+		asciidoc
+		aspell
+		audacity
+		bitcoin
+		blender
+		bsdgames
+		cdrkit
+		conky
+		cowsay
+		cryptsetup
+		dmenu
+		dosbox
+		dwm
+		dzen2
+		ethtool
+		evtest
+		fakeroot
+		ffmpeg
+		file
 		firefox
-		git
-		gnupg
+		fluidsynth
+		fuse_exfat
+		ghostscript
+		gimp
+		gitAndTools.gitFull
+		gitAndTools.gitAnnex
+		glxinfo
+		gnuplot
 		go
+		gparted
+		gptfdisk
+		gutenprint
 		haskellPackages.ghc
 		haskellPackages.haskellPlatform
+		haskellPackages.idris
+		herbstluftwm
+		htop
+		iftop
+		imagemagick
+		inkscape
+		irssi
+		kde4.ark
+		kde4.konsole
+		kde4.okular
 		kde4.kdemultimedia
 		kde4.kdegraphics
 		kde4.kdeutils
@@ -35,12 +77,77 @@
 		kde4.kdelibs
 		kde4.kdevelop
 		kde4.kdevplatform
+		keepassx
+		libarchive
+		lilypond
+		lsof
+		lyx
+		manpages
+		mc
+		mercurial
+		mplayer
+		mumble
+		mupen64plus
+		mutt
 		ncmpcpp
+		neverball
+		nmap
+		nodejs
+		ntp
+		octave
+		openconnect
+		openjdk
+		opusTools
+		p7zip
+		patchelf
+		pidgin
+		pidginotr
+		pixman
+		pkgconfig
+		pmutils
+		psmisc
+		pv
 		pwgen
-		vim
+		qemu
+		R
+		rdiff_backup
+		remind
+		rpm
+		rxvt
+		samba
+		screen
+		spidermonkey
+		stalonetray
+		stellarium
+		telnet
+		texLiveBeamer
+		texLive
+		thunderbird
+		tor
+		torchat
+		transmission
+		unetbootin
+		unrar
+		unzip
+		utillinuxCurses
+		verilog
+		vifm
+		vim_configurable
+		linuxPackages.virtualbox
+		vlc
 		w3m
+		wayland
+		weston
+		wget
+		which
+		wicd
+		xbindkeys
+		xcalib
+		xclip
+		xlibs.xorgserver
+		zip
 		zsh
+		zsnes
 	];
-
 }
 

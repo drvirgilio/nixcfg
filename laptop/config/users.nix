@@ -7,7 +7,7 @@
 			createHome = true;
 			home = "/home/david";
 			group = "users";
-			extraGroups = [ "wheel" "transmission" "mpd" ];
+			extraGroups = [ "wheel" "audio" "transmission" "mpd" ];
 			shell = "/bin/sh";
 		};
 		work = {
