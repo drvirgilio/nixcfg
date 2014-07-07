@@ -1,15 +1,19 @@
 { config, pkgs, ... }:
 
 {
+
+	config.programs.ssh.startAgent = false;
+
 	######## SERVICES ##########
 	config.services = {
 		acpid = {
 			enable = true;
-			powerEventCommands = ''
-				echo -n mem > /sys/power/state
-			'';
+#			powerEventCommands = ''
+#				# When the power button is pressed, go to sleep
+#				echo -n mem > /sys/power/state
+#			'';
 		};
-		printing.enable = false;
+		printing.enable = true;
 		mpd.enable = false;
 		nixosManual.showManual = true;
 		transmission.enable = false;
@@ -18,6 +22,7 @@
 			permitRootLogin = "no";
 		};
 		xserver = {
+			videoDrivers = ["intel"];
 			enable = true;
 			displayManager.slim.enable = true;
 			displayManager.sessionCommands = ''
@@ -31,12 +36,12 @@
 			windowManager.herbstluftwm.enable = true;
 			defaultDepth = 24;
 			autorun = false;
-			startOpenSSHAgent = false;
 			exportConfiguration = true;
+			xkbOptions = "terminate:ctrl_alt_bksp, numpad:mac";
 			synaptics = {
 				enable = true;
 				#dev = "/dev/input/by-path/platform-i8042-serio-1-event-mouse";
-				dev = "/dev/input/event4";
+				dev = "/dev/input/event6";
 				accelFactor = "0.05";
 				maxSpeed = "10";
 				twoFingerScroll = true;
@@ -53,3 +58,4 @@
 		};
 	};
 }
+
