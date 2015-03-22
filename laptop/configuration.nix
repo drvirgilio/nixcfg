@@ -2,7 +2,7 @@
 
 {
   ########## NIX ##############
-  nix = {
+  config.nix = {
     binaryCaches = [
       "https://hydra.nixos.org"
       "http://hydra.nixos.org"
