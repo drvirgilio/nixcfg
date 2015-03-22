@@ -30,6 +30,7 @@
       name = "luksroot";
       device = "/dev/sda2";
       preLVM = true;
+      allowDiscards = true; # support TRIM commands
     }
   ];
 
@@ -44,17 +45,23 @@
   config.fileSystems = [
     {
       mountPoint = "/";
-      device = "/dev/disk/by-uuid/037ec17e-8cbb-4eae-86d2-b7f237579a93";
+      device = "/dev/disk/by-uuid/20af57ce-520d-441a-ab94-d8d0ca9ae4ed";
+      fsType = "ext4";
+      options = "defaults,relatime,discard";
       neededForBoot = true;
     }
     {
       mountPoint = "/boot";
       device = "/dev/sda1";
+      fsType = "vfat";
+      options = "defaults,relatime,discard";
       neededForBoot = false;
     }
     {
       mountPoint = "/home";
-      device = "/dev/disk/by-uuid/8f98873c-9a51-416d-9138-1cd46279579e";
+      device = "/dev/disk/by-uuid/c7f9c351-6721-4a58-8c85-ed00a54918ba";
+      fsType = "ext4";
+      options = "defaults,relatime,discard";
       neededForBoot = false;
     }
     {
@@ -68,7 +75,7 @@
   ########### SWAP ###########
   config.swapDevices = [
     {
-      device = "/dev/disk/by-uuid/17a3a0bd-c200-4518-a64d-838611832e4c";
+      device = "/dev/disk/by-uuid/ccd1b225-d70f-4cea-bb79-a96b0a23c941";
     }
   ];
 }

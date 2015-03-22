@@ -1,6 +1,23 @@
 { config, pkgs, ... }:
 
 {
+  ########## NIX ##############
+  nix = {
+    binaryCaches = [
+      "https://hydra.nixos.org"
+      "http://hydra.nixos.org"
+      "https://cache.nixos.org"
+      "http://cache.nixos.org"
+    ];
+    trustedBinaryCaches = [
+      "https://hydra.nixos.org"
+      "http://hydra.nixos.org"
+      "https://cache.nixos.org"
+      "http://cache.nixos.org"
+    ];
+    buildCores = 4;
+  };
+
   ######### IMPORTS ###########
   imports = [
     ./hardware.nix

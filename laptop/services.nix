@@ -45,8 +45,6 @@
       xkbOptions = "terminate:ctrl_alt_bksp, numpad:mac";
       synaptics = {
         enable = true;
-        #dev = "/dev/input/by-path/platform-i8042-serio-1-event-mouse";
-        dev = "/dev/input/event4";
         accelFactor = "0.05";
         maxSpeed = "10";
         twoFingerScroll = true;
