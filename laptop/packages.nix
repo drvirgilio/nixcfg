@@ -109,7 +109,7 @@
   # keepassx2
     leocad
     libarchive
-    libreoffice
+  # libreoffice
     lilypond
     linuxPackages.perf
     lsof
@@ -159,7 +159,7 @@
     remind
     rpm
     ruby
-    rustc
+  # rustc
   # rxvt
     rxvt_unicode
   # samba

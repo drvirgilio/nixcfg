@@ -20,7 +20,6 @@
   ######### AUDIO ###########
   config.hardware.pulseaudio = {
     enable = true;
-    package = pkgs.pulseaudio.override { jackaudioSupport = true; };
   };
 
   ###### LUKS PARTITION ######
