@@ -1,29 +1,59 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, ... } :
 {
+  require = [
+    ../../modules/android-dev.nix
+    ../../modules/bash.nix
+    ../../modules/gfx-pkgs.nix
+    ../../modules/locale.nix
+    ../../modules/security.nix
+    ../../modules/std-env.nix
+    ../../modules/std-nixpath.nix
+    ../../modules/std-pkgs.nix
+    ../../modules/std-services.nix
+    ../../modules/xserver.nix
+    ../../users/david.nix
+  ];
+
+  networking = {
+    wireless.enable = true;
+    hostName = "fabletop";
+    firewall = {
+      enable = true;
+      allowPing = true;
+      rejectPackets = true;
+      allowedTCPPorts = [
+        80    # http
+        443   # https
+        587   # smtps
+        7000  # irc
+        #6600 # mpd
+        51413 # bittorrent
+      ];
+    };
+  };
+
+  services.xserver.videoDrivers = ["intel"];
+
+  hardware.pulseaudio = {
+    enable = true;
+  };
+
   ######### KERNEL ###########
-  #imports = [ <nixos/modules/installer/scan/not-detected.nix> ];
-  #config.boot.kernelPackages = pkgs.linuxPackages_3_13;
-  config.boot.initrd.kernelModules = [ "ehci_hcd" "ahci" "fbcon" ];
-  config.boot.kernelModules = [ "kvm-intel" ];
-  config.boot.extraModulePackages = [ ];
-  config.nix.maxJobs = 4;
+  #boot.kernelPackages = pkgs.linuxPackages_3_13;
+  boot.initrd.kernelModules = [ "ehci_hcd" "ahci" "fbcon" ];
+  boot.kernelModules = [ "kvm-intel" ];
+  boot.extraModulePackages = [ ];
+  nix.maxJobs = 4;
 
   ######## DRIVERS ##########
-  config.hardware.bluetooth.enable = false;
-  config.hardware.opengl = {
-#   videoDrivers = ["intel"];
+  hardware.bluetooth.enable = false;
+  hardware.opengl = {
     driSupport32Bit = true;
     s3tcSupport = true;
   };
 
-  ######### AUDIO ###########
-  config.hardware.pulseaudio = {
-    enable = true;
-  };
-
   ###### LUKS PARTITION ######
-  config.boot.initrd.luks.devices = [
+  boot.initrd.luks.devices = [
     {
       # This is the hard drive of the laptop
       name = "luksroot";
@@ -34,14 +64,14 @@
   ];
 
   ####### BOOTLOADER ########
-  config.boot.loader.grub.enable = false;
-  config.boot.loader.gummiboot = {
+  boot.loader.grub.enable = false;
+  boot.loader.gummiboot = {
     enable = true;
     timeout = 4;
   };
 
   ######## FILESYSTEMS ########
-  config.fileSystems = [
+  fileSystems = [
     {
       mountPoint = "/";
       device = "/dev/disk/by-uuid/20af57ce-520d-441a-ab94-d8d0ca9ae4ed";
@@ -72,9 +102,11 @@
   ];
 
   ########### SWAP ###########
-  config.swapDevices = [
+  swapDevices = [
     {
       device = "/dev/disk/by-uuid/ccd1b225-d70f-4cea-bb79-a96b0a23c941";
     }
   ];
+
+
 }
