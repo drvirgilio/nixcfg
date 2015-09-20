@@ -57,7 +57,7 @@
     {
       # This is the hard drive of the laptop
       name = "luksroot";
-      device = "/dev/sda2";
+      device = "/dev/disk/by-uuid/7f83f54e-f80c-4058-9308-85132c702b4b";
       preLVM = true;
       allowDiscards = true; # support TRIM commands
     }
@@ -81,7 +81,7 @@
     }
     {
       mountPoint = "/boot";
-      device = "/dev/sda1";
+      device = "/dev/disk/by-uuid/5CC6-C944";
       fsType = "vfat";
       options = "defaults,relatime,discard";
       neededForBoot = false;
