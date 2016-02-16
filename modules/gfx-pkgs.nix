@@ -26,12 +26,12 @@ with lib;
     dzen2
     epdfview
     firefoxWrapper
-    frescobaldi
+  # frescobaldi
     gimp
     gitg
     glxinfo
     gmrun
-    gnash
+  # gnash
     #haskellPackages.xmobar
   # herbstluftwm
     inkscape
@@ -55,7 +55,7 @@ with lib;
     kde4.kdepim
     kde4.kdepimlibs
     kde4.kdeplasma_addons
-    kde4.kdesdk
+  # kde4.kdesdk
     kde4.kdetoys
     kde4.kde_wallpapers
     kde4.kdewebdev
@@ -102,7 +102,7 @@ with lib;
     xlibs.xmodmap
   # xlibs.xorgserver
     xscreensaver
-    xwayland
+  # xwayland
   # zsnes
   ];
 }

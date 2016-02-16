@@ -60,7 +60,7 @@ with lib;
     jq
     keychain
     libarchive
-    lilypond
+  # lilypond
     linuxPackages.perf
     lsof
     ltrace
