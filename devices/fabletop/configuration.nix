@@ -96,28 +96,28 @@
       mountPoint = "/";
       device = "/dev/disk/by-uuid/20af57ce-520d-441a-ab94-d8d0ca9ae4ed";
       fsType = "ext4";
-      options = "defaults,relatime,discard";
+      options = ["defaults" "relatime" "discard"];
       neededForBoot = true;
     }
     {
       mountPoint = "/boot";
       device = "/dev/disk/by-uuid/5CC6-C944";
       fsType = "vfat";
-      options = "defaults,relatime,discard";
+      options = ["defaults" "relatime" "discard"];
       neededForBoot = false;
     }
     {
       mountPoint = "/home";
       device = "/dev/disk/by-uuid/c7f9c351-6721-4a58-8c85-ed00a54918ba";
       fsType = "ext4";
-      options = "defaults,relatime,discard";
+      options = ["defaults" "relatime" "discard"];
       neededForBoot = false;
     }
     {
       mountPoint = "/tmp";
       device = "tmpfs";
       fsType = "tmpfs";
-      options = "nosuid,nodev,relatime";
+      options = ["nosuid" "nodev" "relatime"];
     }
   ];
 
