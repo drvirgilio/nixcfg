@@ -6,7 +6,7 @@ with pkgs.lib;
       createHome = true;
       home = "/home/david";
       group = "users";
-      extraGroups = [ "wheel" "audio" "dialout" "cups" ];
+      extraGroups = [ "wheel" "storage" "audio" "dialout" "cups" ];
       shell = "/bin/sh";
       openssh.authorizedKeys.keyFiles = [];
     };
