@@ -17,8 +17,27 @@
 
   services.xserver = {
     enable = true;
-    desktopManager.default = "none";
-    displayManager.slim.enable = true;
+    layout = "us";
+    startGnuPGAgent = true;
+    displayManager = {
+      slim.enable = true;
+    };
+    desktopManager = {
+      xterm.enable = false;
+      default = "none";
+    };
+    windowManager = {
+      default = "xmonad";
+      xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+        extraPackages = self: [
+          self.xmonad-contrib
+          self.xmonad-extras
+          self.xmobar
+        ];
+      };
+    };
     defaultDepth = 24;
     autorun = true;
     exportConfiguration = true;
@@ -37,16 +56,6 @@
         #Option "CircularScrolling"    "on"
         #Option "CircScrollTrigger"    "0"
       '';
-    };
-    windowManager.default = "xmonad";
-    windowManager.xmonad = {
-      enable = true;
-      enableContribAndExtras = true;
-      extraPackages = self: [
-        self.xmonad-contrib
-        self.xmonad-extras
-        self.xmobar
-      ];
     };
   };
 }
