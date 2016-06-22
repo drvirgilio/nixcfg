@@ -1,18 +1,6 @@
 { config, pkgs, lib, ... } :
 with lib;
 {
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    firefox = {
-      enableAdobeFlash = true;
-      icedtea = true;
-    };
-    chromium = {
-      enablePepperFlash = true; # Chromium's non-NSAPI alternative to Adobe Flash
-      enablePepperPDF = true;
-    };
-  };
   environment.systemPackages = with pkgs; [
   #### COMMAND LINE ####
     abcde
@@ -45,7 +33,6 @@ with lib;
     htop
     iftop
     imagemagick
-  # inetutils
     iotop
     jq
     libarchive
@@ -78,9 +65,7 @@ with lib;
     ssss
     tarsnap
     tor
-  # transmission
     tree
-    unrar
     unzip
     utillinuxCurses
     vim_configurable
@@ -92,21 +77,15 @@ with lib;
     zsh
 
   #### GRAPHICAL ####
-    chromium
     dmenu2
     dzen2
     epdfview
-    firefoxWrapper
     gparted
-    kde4.konsole
-    kde4.okular
-    kde4.quasselClient
     mesa
     mplayer
     pavucontrol
     qemu
     scrot
-    thunderbird
     torbrowser
     transmission_gtk
     trayer
