@@ -1,5 +1,12 @@
 { config, pkgs, ... } :
 {
+  ######## DRIVERS ##########
+  hardware.opengl = {
+    driSupport32Bit = true;
+    s3tcSupport = true;
+  };
+
+  ######## FONTS ############
   fonts = {
     fontconfig.enable = true;
     enableFontDir = true;
@@ -15,15 +22,17 @@
     ];
   };
 
+  ######## XSERVER #########
   services.xserver = {
+    videoDrivers = ["intel"];
     enable = true;
     layout = "us";
-    startGnuPGAgent = true;
     displayManager = {
       slim.enable = true;
     };
     desktopManager = {
       xterm.enable = false;
+      kde5.enable = false;
       default = "none";
     };
     windowManager = {
@@ -59,3 +68,4 @@
     };
   };
 }
+

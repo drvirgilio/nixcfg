@@ -1,30 +1,21 @@
 { config, pkgs, ... } :
 {
-  system.replaceRuntimeDependencies = with pkgs.lib; [{
-    original = pkgs.glibc;
-    replacement = pkgs.stdenv.lib.overrideDerivation pkgs.glibc (oldAttr: {
-      patches = oldAttr.patches ++ [(
-        pkgs.fetchurl {
-          url = "https://raw.githubusercontent.com/NixOS/nixpkgs/master/pkgs/development/libraries/glibc/cve-2015-7547.patch";
-          sha256 = "0awpc4rp2x27rjpj83ps0rclmn73hsgfv2xxk18k82w4hdxqpp5r";
-        }
-      )];
-    });
-  }];
 
   require = [
-    ../../modules/bash.nix
-    ../../modules/gfx-pkgs.nix
-    ../../modules/locale.nix
-    ../../modules/security.nix
-    ../../modules/std-env.nix
-    ../../modules/std-nixpath.nix
-    ../../modules/std-pkgs.nix
-    ../../modules/std-services.nix
-    ../../modules/xserver.nix
-    ../../users/david.nix
+
+    ./modules/graphics.nix
+    ./modules/packages.nix
+    ./modules/nixpath.nix
+    ./modules/security.nix
+    ./modules/services.nix
+    ./modules/shell.nix
+    ./modules/users/david.nix
   ];
 
+  programs.ssh.startAgent = false;
+  users.mutableUsers = true;
+
+  ##### NIX PACKAGES #####
   nix = {
     trustedBinaryCaches = [
       http://hydra.cryp.to
@@ -34,6 +25,15 @@
     ];
   };
 
+  ##### LOCALE #####
+  i18n = {
+    consoleFont = "lat9w-16";
+    consoleKeyMap = "us";
+    defaultLocale = "en_DK.UTF-8";
+  };
+  time.timeZone = "America/Chicago";
+
+  ##### NETWORK #####
   networking = {
     wireless.enable = true;
     hostName = "fabletop";
@@ -52,11 +52,13 @@
     };
   };
 
-  services.xserver.videoDrivers = ["intel"];
-
+  ##### AUDIO #####
   hardware.pulseaudio = {
     enable = true;
   };
+
+  #### BLUETOOTH #####
+  hardware.bluetooth.enable = true;
 
   ######### KERNEL ###########
   #boot.kernelPackages = pkgs.linuxPackages_3_13;
@@ -64,13 +66,6 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
   nix.maxJobs = 4;
-
-  ######## DRIVERS ##########
-  hardware.bluetooth.enable = false;
-  hardware.opengl = {
-    driSupport32Bit = true;
-    s3tcSupport = true;
-  };
 
   ###### LUKS PARTITION ######
   boot.initrd.luks.devices = [
@@ -85,10 +80,8 @@
 
   ####### BOOTLOADER ########
   boot.loader.grub.enable = false;
-  boot.loader.gummiboot = {
-    enable = true;
-    timeout = 4;
-  };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.timeout = 4;
 
   ######## FILESYSTEMS ########
   fileSystems = [

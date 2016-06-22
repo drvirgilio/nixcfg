@@ -1,7 +1,10 @@
 { config, pkgs, ... } :
 {
-  config.programs.bash.enableCompletion = true;
-  config.programs.bash.promptInit = ''
+  environment.shellInit = ''
+    export LC_ALL=${config.i18n.defaultLocale}
+  '';
+  programs.bash.enableCompletion = true;
+  programs.bash.promptInit = ''
     # Provide a nice prompt
     PROMPT_COLOR="1;31m"
     let $UID && PROMPT_COLOR="1;32m"
