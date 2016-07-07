@@ -28,7 +28,10 @@
     enable = true;
     layout = "us";
     displayManager = {
-      slim.enable = true;
+      sddm = {
+        enable = true;
+        autoNumlock = true;
+      };
     };
     desktopManager = {
       xterm.enable = false;
