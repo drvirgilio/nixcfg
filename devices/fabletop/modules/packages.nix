@@ -58,6 +58,7 @@ with lib;
     python
     qrencode
     rhash
+    samba
     screen
     scrypt
     socat
