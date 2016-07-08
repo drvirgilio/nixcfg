@@ -10,7 +10,7 @@ with lib;
     acpid.enable = true;
     dbus.enable = true;
     mpd.enable = false;
-    nixosManual.showManual = true;
+    nixosManual.showManual = false;
     ntp.enable = true;
     openssh.enable = false;
     printing.enable = true;
