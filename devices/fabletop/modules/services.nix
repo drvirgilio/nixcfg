@@ -13,7 +13,11 @@ with lib;
     nixosManual.showManual = false;
     ntp.enable = true;
     openssh.enable = false;
-    printing.enable = true;
+    printing = {
+      enable = true;
+      gutenprint = true;
+      drivers = [ pkgs.foomatic_filters ];
+    };
     transmission.enable = false;
     udisks2.enable = true;
     upower.enable = true;
