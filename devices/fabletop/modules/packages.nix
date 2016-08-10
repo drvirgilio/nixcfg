@@ -1,7 +1,11 @@
 { config, pkgs, lib, ... } :
 with lib;
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = let
+    vimPackages = import ./vim/vimPackages.nix pkgs;
+    neovimPackages = import ./vim/neovimPackages.nix pkgs;
+  in
+    vimPackages ++ neovimPackages ++ (with pkgs; [
   #### COMMAND LINE ####
     abcde
     acpi
@@ -104,6 +108,6 @@ with lib;
     xlibs.xkill
     xlibs.xmodmap
     xscreensaver
-  ];
+  ]);
 }
 
