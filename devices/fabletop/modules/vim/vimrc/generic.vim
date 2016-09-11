@@ -9,6 +9,9 @@ set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
 set complete-=i
 
+" enable mouse
+set mouse=a
+
 " move through long lines
 map j gj
 map k gk

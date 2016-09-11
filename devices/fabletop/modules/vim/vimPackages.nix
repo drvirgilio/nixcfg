@@ -12,4 +12,5 @@ let
 in
   [
     vim
+    pkgs.ctags
   ]

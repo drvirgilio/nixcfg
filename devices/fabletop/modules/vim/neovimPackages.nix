@@ -9,4 +9,5 @@ let
 in
   [
     nvim
+    pkgs.ctags
   ]

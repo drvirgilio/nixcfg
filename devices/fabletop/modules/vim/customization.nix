@@ -22,10 +22,12 @@ in
 #Plugin 'screen.vim'
 
     { name = "idris-vim"; }
+    { name = "The_NERD_tree"; }
     { name = "vim-go"; }
     { name = "vim-nix"; }
     { name = "vim-trailing-whitespace"; }
     { name = "youcompleteme"; }
+    { name = "rust-vim"; }
 
     ];
   };
