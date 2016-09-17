@@ -35,7 +35,7 @@
     };
     desktopManager = {
       xterm.enable = false;
-      kde5.enable = false;
+      kde5.enable = true;
       default = "none";
     };
     windowManager = {
