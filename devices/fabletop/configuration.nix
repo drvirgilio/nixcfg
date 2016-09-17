@@ -15,16 +15,6 @@
   programs.ssh.startAgent = false;
   users.mutableUsers = true;
 
-  ##### NIX PACKAGES #####
-  nix = {
-    trustedBinaryCaches = [
-      http://hydra.cryp.to
-    ];
-    binaryCachePublicKeys = [
-      "hydra.cryp.to-1:8g6Hxvnp/O//5Q1bjjMTd5RO8ztTsG8DKPOAg9ANr2g="
-    ];
-  };
-
   ##### LOCALE #####
   i18n = {
     consoleFont = "lat9w-16";
