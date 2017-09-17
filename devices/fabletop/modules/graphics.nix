@@ -35,21 +35,21 @@
     };
     desktopManager = {
       xterm.enable = false;
-      kde5.enable = true;
+      plasma5.enable = true;
       default = "none";
     };
-    windowManager = {
-      default = "xmonad";
-      xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-        extraPackages = self: [
-          self.xmonad-contrib
-          self.xmonad-extras
-          self.xmobar
-        ];
-      };
-    };
+    #windowManager = {
+    #  default = "xmonad";
+    #  xmonad = {
+    #    enable = true;
+    #    enableContribAndExtras = true;
+    #    extraPackages = self: [
+    #      self.xmonad-contrib
+    #      self.xmonad-extras
+    #      self.xmobar
+    #    ];
+    #  };
+    #};
     defaultDepth = 24;
     autorun = true;
     exportConfiguration = true;

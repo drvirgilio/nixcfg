@@ -91,7 +91,7 @@ with lib;
     pavucontrol
     qemu
     scrot
-    torbrowser
+    #torbrowser
     transmission_gtk
     trayer
     vidalia
