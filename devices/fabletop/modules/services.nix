@@ -15,8 +15,7 @@ with lib;
     openssh.enable = false;
     printing = {
       enable = true;
-      gutenprint = true;
-      drivers = [ pkgs.foomatic_filters ];
+      drivers = [ pkgs.gutenprint pkgs.foomatic_filters ];
     };
     transmission.enable = false;
     udisks2.enable = true;
