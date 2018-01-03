@@ -26,8 +26,10 @@ in
     { name = "vim-go"; }
     { name = "vim-nix"; }
     { name = "vim-trailing-whitespace"; }
-    { name = "youcompleteme"; }
+    { name = "youcompleteme"; } # should be replaced with deoplete
     { name = "rust-vim"; }
+    { name = "surround"; }
+    { name = "tabular"; }
 
     ];
   };
