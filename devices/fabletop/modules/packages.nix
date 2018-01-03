@@ -26,14 +26,18 @@ with lib;
     flac
     fluidsynth
     fop
+    fdupes
     fuse_exfat
     ghostscript
+    gitAndTools.gitAnnex
     gitAndTools.gitflow
     gitAndTools.gitFull
     gnumake
     gnupg1compat
     gptfdisk
     haveged
+    hexedit
+    html-tidy
     htop
     iftop
     imagemagick
@@ -45,14 +49,17 @@ with lib;
     ltrace
     manpages
     mercurial
+    mosh
     ngrep
     nix-prefetch-scripts
     nix-repl
     nmap
     opusTools
     p7zip
+    parted
     pass
     patchelf
+    pciutils
     pixman
     pkgconfig
     pmutils
@@ -69,9 +76,11 @@ with lib;
     sqlite
     ssss
     tarsnap
+    tmux
     tor
     tree
     unzip
+    usbutils
     utillinuxCurses
     vim_configurable
     wget
@@ -82,20 +91,26 @@ with lib;
     zsh
 
   #### GRAPHICAL ####
+    ark
     dmenu2
     dzen2
     epdfview
     gparted
+    graphviz
+    kdeApplications.spectacle
+    kdeFrameworks.karchive
     mesa
     mplayer
+    mpv
     pavucontrol
     qemu
     scrot
     #torbrowser
     transmission_gtk
     trayer
-    vidalia
     vlc
+    weston
+    wine
     xawtv
     xbindkeys
     xcalib
