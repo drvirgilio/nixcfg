@@ -97,15 +97,15 @@ with lib;
     epdfview
     gparted
     graphviz
+    imv
     kdeApplications.spectacle
     kdeFrameworks.karchive
-    mesa
     mplayer
     mpv
     pavucontrol
     qemu
     scrot
-    #torbrowser
+    tor-browser-bundle-bin
     transmission_gtk
     trayer
     vlc
