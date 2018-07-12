@@ -12,6 +12,8 @@
     ./modules/users/david.nix
   ];
 
+  system.nixos.stateVersion = "18.03";
+
   programs.ssh.startAgent = false;
   users.mutableUsers = true;
 
