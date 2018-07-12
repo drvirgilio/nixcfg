@@ -12,8 +12,10 @@ with lib;
     acpid
     anonymousPro
     ascii
+    asciidoc
     aspell
     aspellDicts.en
+    bench
     bc
     cryptsetup
     dbus_libs
@@ -42,17 +44,21 @@ with lib;
     iftop
     imagemagick
     iotop
+    jekyll
     jq
     libarchive
+    lilypond
     linuxPackages.perf
     lsof
     ltrace
     manpages
     mercurial
     mosh
+    ncdu
     ngrep
     nix-prefetch-scripts
     nix-repl
+    nixops
     nmap
     opusTools
     p7zip
@@ -60,6 +66,8 @@ with lib;
     pass
     patchelf
     pciutils
+    picocom
+    pigz
     pixman
     pkgconfig
     pmutils
@@ -67,6 +75,7 @@ with lib;
     pv
     pwgen
     python
+    python36Packages.xdot
     qrencode
     rhash
     samba
@@ -82,35 +91,47 @@ with lib;
     unzip
     usbutils
     utillinuxCurses
+    v4l_utils
     vim_configurable
     wget
     which
-    wireshark-cli
     zbar
     zip
     zsh
 
   #### GRAPHICAL ####
     ark
+    audacity
+    blender
     dmenu2
     dzen2
     epdfview
     gparted
     graphviz
+    gimp-with-plugins
+    higan
     imv
+    inkscape
+    kate
     kdeApplications.spectacle
     kdeFrameworks.karchive
+    keepassx
+    leocad
+    librecad
+    libreoffice
     mplayer
     mpv
     pavucontrol
     qemu
     scrot
+    sway
     tor-browser-bundle-bin
     transmission_gtk
     trayer
     vlc
     weston
     wine
+    wireshark-qt
     xawtv
     xbindkeys
     xcalib
@@ -123,6 +144,7 @@ with lib;
     xlibs.xkill
     xlibs.xmodmap
     xscreensaver
+    zsnes
   ]);
 }
 
