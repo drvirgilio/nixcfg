@@ -22,6 +22,21 @@
     ];
   };
 
+  ######## REDSHIFT #######
+  services.redshift = {
+    enable = true;
+    latitude = "43.1";
+    longitude = "-89.4";
+    temperature = {
+      day = 5500;
+      night = 3700;
+    };
+    brightness = {
+      day = "1";
+      night = "1";
+    };
+  };
+
   ######## XSERVER #########
   services.xserver = {
     videoDrivers = ["intel"];
