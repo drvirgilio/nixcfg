@@ -63,7 +63,7 @@ with lib;
     opusTools
     p7zip
     parted
-    pass
+    (pass.withExtensions (ext: with ext; [ pass-tomb ]))
     patchelf
     pciutils
     picocom
