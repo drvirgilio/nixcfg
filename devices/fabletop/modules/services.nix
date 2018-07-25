@@ -17,7 +17,11 @@ with lib;
       enable = true;
       drivers = [ pkgs.gutenprint pkgs.foomatic_filters ];
     };
+    pcscd.enable = true;
     transmission.enable = false;
+    udev = {
+      packages = [ pkgs.yubikey-personalization ];
+    };
     udisks2.enable = true;
     upower.enable = true;
     xfs.enable = false;
