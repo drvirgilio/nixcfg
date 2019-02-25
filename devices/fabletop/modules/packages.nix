@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... } :
 with lib;
 {
+  nixpkgs.config.android_sdk.accept_license = true;
+
   environment.systemPackages = let
     vimPackages = import ./vim/vimPackages.nix pkgs;
     neovimPackages = import ./vim/neovimPackages.nix pkgs;

@@ -14,6 +14,7 @@
 
   system.stateVersion = "18.03";
 
+  programs.adb.enable = true;
   programs.ssh.startAgent = false;
   users.mutableUsers = true;
 
