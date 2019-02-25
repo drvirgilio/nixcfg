@@ -30,6 +30,7 @@ in
     { name = "rust-vim"; }
     { name = "surround"; }
     { name = "tabular"; }
+    { name = "pest.vim"; }
 
     ];
   };

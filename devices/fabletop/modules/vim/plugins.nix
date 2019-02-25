@@ -14,4 +14,14 @@ in {
     dependencies = [];
   };
 
+  "pest.vim" = buildVimPlugin {
+    name = "pest.vim";
+    src = fetchgit {
+      url = "https://github.com/pest-parser/pest.vim";
+      rev = "79ef682b0a4ac6574e999daa048f313b9e7553ef";
+      sha256 = "15kdqmvklnbb3dk3b1qfnkd0rhvdx9ywr36yin7ddmpzb3bzrx0k";
+    };
+    dependencies = [];
+  };
+
 }
