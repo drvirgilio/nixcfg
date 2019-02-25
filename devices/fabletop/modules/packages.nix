@@ -95,6 +95,7 @@ with lib;
     vim_configurable
     wget
     which
+    yubikey-personalization
     zbar
     zip
     zsh

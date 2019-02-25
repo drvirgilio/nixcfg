@@ -17,6 +17,8 @@
   programs.ssh.startAgent = false;
   users.mutableUsers = true;
 
+  hardware.u2f.enable = true;
+
   ##### LOCALE #####
   i18n = {
     consoleFont = "lat9w-16";
