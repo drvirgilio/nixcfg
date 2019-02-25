@@ -33,7 +33,6 @@ with lib;
     fdupes
     fuse_exfat
     ghostscript
-    gitAndTools.gitAnnex
     gitAndTools.gitflow
     gitAndTools.gitFull
     gnumake
@@ -45,6 +44,7 @@ with lib;
     htop
     iftop
     imagemagick
+    indent
     iotop
     jekyll
     jq
@@ -59,13 +59,13 @@ with lib;
     ncdu
     ngrep
     nix-prefetch-scripts
-    nix-repl
     nixops
     nmap
     opusTools
     p7zip
+    paperkey
     parted
-    (pass.withExtensions (ext: with ext; [ pass-tomb ]))
+    (pass.withExtensions (ext: with ext; [ pass-tomb pass-update ]))
     patchelf
     pciutils
     picocom
@@ -85,11 +85,13 @@ with lib;
     scrypt
     socat
     sqlite
+    srm
     ssss
     tarsnap
     tmux
     tor
     tree
+    unar
     unzip
     usbutils
     utillinuxCurses
@@ -116,6 +118,7 @@ with lib;
     imv
     inkscape
     kate
+    kdeApplications.kgpg
     kdeApplications.spectacle
     kdeFrameworks.karchive
     keepassx
@@ -127,6 +130,7 @@ with lib;
     pavucontrol
     qemu
     scrot
+    signal-desktop
     sway
     tor-browser-bundle-bin
     transmission_gtk
