@@ -20,6 +20,16 @@ with lib;
     pcscd.enable = true;
     transmission.enable = false;
     udev = {
+      extraRules = ''
+        # FT232 - USB <-> Serial Converter
+        ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE:="0666"
+
+        # STM32F3DISCOVERY rev A/B - ST-LINK/V2
+        ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE:="0666"
+
+        # STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
+        ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", MODE:="0666"
+      '';
       packages = [ pkgs.yubikey-personalization ];
     };
     udisks2.enable = true;
