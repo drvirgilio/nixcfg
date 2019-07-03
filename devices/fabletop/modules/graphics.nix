@@ -67,7 +67,7 @@
     #};
     defaultDepth = 24;
     autorun = true;
-    exportConfiguration = true;
+    exportConfiguration = false;
     xkbOptions = "terminate:ctrl_alt_bksp, numpad:mac";
     synaptics = {
       enable = true;

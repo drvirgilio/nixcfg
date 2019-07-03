@@ -18,6 +18,7 @@ with lib;
       drivers = [ pkgs.gutenprint pkgs.foomatic_filters ];
     };
     pcscd.enable = true;
+    syncthing.enable = true;
     transmission.enable = false;
     udev = {
       extraRules = ''
