@@ -16,6 +16,7 @@
 
   programs.adb.enable = true;
   programs.ssh.startAgent = false;
+  programs.firejail.enable = true;
   users.mutableUsers = true;
 
   hardware.u2f.enable = true;
