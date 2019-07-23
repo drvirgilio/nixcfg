@@ -37,6 +37,9 @@
       enable = true;
       allowPing = true;
       rejectPackets = true;
+      allowedUDPPorts = [
+        5353 6112 # StarCraft
+      ];
       allowedTCPPorts = [
         80    # http
         443   # https
