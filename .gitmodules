@@ -1,0 +1,4 @@
+[submodule "nixpkgs"]
+	path = devices/laptop0/nixpkgs
+	url = https://github.com/NixOS/nixpkgs-channels.git
+	branch = nixos-unstable
