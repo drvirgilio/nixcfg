@@ -9,12 +9,6 @@ Information about NixOS can be found [here](https://nixos.org/)
 
 Inspired by http://www.haskellforall.com/2018/08/nixos-in-production.html
 
-### Checkout git submodule
-
-```sh
-
-```
-
 ### Build
 
 ```sh
