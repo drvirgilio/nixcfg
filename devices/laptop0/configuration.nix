@@ -16,7 +16,9 @@
       enable = true;
       allowPing = false;
       rejectPackets = true;
-      allowedTCPPorts = [];
+      allowedTCPPorts = [
+        9001
+      ];
       allowedUDPPorts = [];
     };
     # proxy = {
