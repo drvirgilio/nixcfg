@@ -54,6 +54,7 @@
     pwgen           # password generator
     qrencode        # qr code generator
     rhash           # utility for computing and verifying hash sums
+    samba           # windows share
     srm             # secure file remove
     tree            # print file tree
     usbutils        # lsusb, usb-devices, usbhid-dump
