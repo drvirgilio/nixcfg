@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+
+  nixpkgs.config.allowUnfree = true;
+
   ### PROGRAMS ###
   nixpkgs.config.android_sdk.accept_license = true;
   programs.adb.enable = true;
@@ -32,6 +35,7 @@
     bench           # benchmarking tool
     borgbackup      # backup utility
     firejail
+    fzf             # search tool
     gitAndTools.gitFull
     gnupg
     gptfdisk        # gdisk command to edit gpt partition table
@@ -42,6 +46,7 @@
     iftop           # bandwidth viewer
     imagemagick     # edit images
     iotop           # display process io usage
+    lsof            # list open files
     ncdu            # disk usage analyzer
     nix-prefetch-scripts
     nmap            # network analyzer/scanner
@@ -64,7 +69,11 @@
     zbar            # bar code reader
 
     ### GRAPHICAL ###
+    discord         # voice and text chat
     imv             # image viewer
+    mako            # wayland notification daemon
+    mpv             # media player
+    mupdf           # pdf viewer
     xorg.xev        # get info about keyboard input
   ];
 }
